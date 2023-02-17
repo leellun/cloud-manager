@@ -1,0 +1,93 @@
+spring:
+  application:
+    name: auth-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.100:31065
+        namespace: e5dfe71c-4579-4e22-bc7a-ac2e5ffab032
+      config:
+        enabled: false
+        import-check:
+          enabled: false
+  datasource:
+    url: jdbc:mysql://192.168.100.100:30325/auth-center?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: lanheerp
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 10
+      min-idle: 10
+      max-active: 50
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      filters: stat,wall
+      max-pool-prepared-statement-per-connection-size: 20
+      use-global-data-source-stat: true
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    type: com.alibaba.druid.pool.DruidDataSource
+  data:
+    redis:
+      host: 192.168.100.100
+      port: 31351
+      password: liulun666
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        register-health-indicator: true # 开启健康检测 /actuator/health 开启详情的情况下可以查看
+        sliding-window-size: 100000
+        sliding-window-type: TIME_BASED # 配置滑动窗口类型。 时间 或者次数
+        minimum-number-of-calls: 2 #配置最小调用次数。当连续错误次数大于它时才会打开circuitbreaker
+        permitted-number-of-calls-in-half-open-state: 3 # 当CircuitBreaker是半开状态时，配置被允许的调用次数。
+        automatic-transition-from-open-to-half-open-enabled: true # 如果为true，则CircuitBreaker会自动从打开状态转化为半开状态。不需要另外的调用来触发这种转换。
+        wait-duration-in-open-state: 10s # CircuitBreaker状态从打开转化为半开时，需要等待的时长。
+        failure-rate-threshold: 1 # 以百分率形式配置失败率阈值。失败率大于等于阈值时，CircuitBreaker转变为打开状态，并使调用短路。
+        event-consumer-buffer-size: 100 # 表示事件缓冲过区大小
+        record-exceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+    instances:
+      order:
+        base-config: default
+      user:
+        register-health-indicator: true
+        sliding-window-size: 10
+        minimum-number-of-calls: 10
+        permitted-number-of-calls-in-half-open-state: 3
+        wait-duration-in-open-state: 5s
+        failure-rate-threshold: 50
+        event-consumer-buffer-size: 10
+  ratelimiter:
+    configs:
+      default:
+        register-health-indicator: false
+        limit-for-period: 10 #在一次刷新周期内，允许执行的最大请求数
+        limit-refresh-period: 1s #限流器每隔limitRefreshPeriod刷新一次，将允许处理的最大请求数量重置为limitForPeriod。
+        timeout-duration: 100000 # 线程等待权限的默认等待时间
+        event-consumer-buffer-size: 100 #事件缓冲区大小
+  retry:
+    configs:
+      default:
+        max-attempts: 3 # 最大重试次数值
+        wait-duration: 70000 # 等待下次尝试的长值
+        retry-exceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+mybatis-plus:
+  mapper-locations: classpath:xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 8082

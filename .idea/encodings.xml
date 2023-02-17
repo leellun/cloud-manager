@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/auth-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-center/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/mybatis-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/mybatis-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/openfeign-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/openfeign-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/redis-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/redis-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/redisson-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/redisson-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/security-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/security-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/swagger-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-components/swagger-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-system/system-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-system/system-service-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-system/system-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-system/system-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: system-service
+  profiles:
+    active: dev
+---
+spring:
+  profiles: prod
+  cloud:
+    nacos:
+      config:
+        server-addr: nacos-hs:8848
+        namespace: e5dfe71c-4579-4e22-bc7a-ac2e5ffab032
+        file-extension: yaml
+logging:
+  config: classpath:logback-spring.xml

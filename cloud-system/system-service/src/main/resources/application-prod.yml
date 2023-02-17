@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  profiles: prod
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.100:32065
+        namespace: e5dfe71c-4579-4e22-bc7a-ac2e5ffab032
+    sentinel:
+      transport:
+        dashboard: 192.168.100.100:32329
+  zipkin:
+    base-url: http://192.168.100.100:32239
+    sender:
+      type: web
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+      probability: 1
+
+  datasource:
+    url: jdbc:mysql://mysql-hcg4:3306/p2p_uaa?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: lanheerp
+    driver-class-name: com.mysql.cj.jdbc.Driver

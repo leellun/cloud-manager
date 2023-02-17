@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: cloud-gateway
+  profiles:
+    active: dev

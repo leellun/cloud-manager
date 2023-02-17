@@ -1,0 +1,72 @@
+{
+  "groups": [
+    {
+      "name": "lanhe.swagger",
+      "type": "com.newland.cloud.swagger3.properties.SwaggerProperties",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties"
+    },
+    {
+      "name": "lanhe.swagger.concat",
+      "type": "com.newland.cloud.swagger3.properties.SwaggerProperties$Concat",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "lanhe.swagger.base-package",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties"
+    },
+    {
+      "name": "lanhe.swagger.concat.email",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties$Concat"
+    },
+    {
+      "name": "lanhe.swagger.concat.name",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties$Concat"
+    },
+    {
+      "name": "lanhe.swagger.concat.url",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties$Concat"
+    },
+    {
+      "name": "lanhe.swagger.description",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties"
+    },
+    {
+      "name": "lanhe.swagger.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties"
+    },
+    {
+      "name": "lanhe.swagger.title",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties"
+    },
+    {
+      "name": "lanhe.swagger.version",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties"
+    },
+    {
+      "name": "lanhe.swagger2.concat.email",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties$Concat"
+    },
+    {
+      "name": "lanhe.swagger2.concat.name",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties$Concat"
+    },
+    {
+      "name": "lanhe.swagger2.concat.url",
+      "type": "java.lang.String",
+      "sourceType": "com.newland.cloud.swagger3.properties.SwaggerProperties$Concat"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.newland.cloud.system.mapper.SysMenuMapper">
+
+    <select id="getPermissions" resultType="java.lang.String">
+        select t1.permission from sys_menu t1 left join sys_role_menu t2 on t1.id = t2.menu_id where t1.type=2 and t2.role_id in
+        <foreach collection="roleIds" open="(" separator="," close=")" item="roleId">#{roleId}</foreach>
+    </select>
+    <select id="getMenuList" resultType="com.newland.cloud.system.entity.SysMenu">
+        select t1.* from sys_menu t1 left join sys_role_menu t2 on t1.id = t2.menu_id where t1.enabled=1 and t2.role_id in
+        <foreach collection="roleIds" open="(" separator="," close=")" item="roleId">#{roleId}</foreach>
+    </select>
+</mapper>

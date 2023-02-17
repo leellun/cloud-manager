@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="security-spring-boot-starter" />
+        <module name="redisson-spring-boot-starter" />
+        <module name="system-service-api" />
+        <module name="system-service" />
+        <module name="openfeign-spring-boot-starter" />
+        <module name="mybatis-spring-boot-starter" />
+        <module name="auth-center" />
+        <module name="redis-spring-boot-starter" />
+        <module name="cloud-commons" />
+        <module name="swagger-spring-boot-starter" />
+        <module name="cloud-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lanhe-commons" target="17" />
+      <module name="lanhe-components" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-center" options="" />
+      <module name="cloud-gateway" options="" />
+      <module name="redisson-spring-boot-starter" options="" />
+    </option>
+  </component>
+</project>

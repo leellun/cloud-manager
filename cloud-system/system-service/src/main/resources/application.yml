@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: system-service
+  profiles:
+    active: dev
+logging:
+  config: classpath:logback-spring.xml

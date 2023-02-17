@@ -1,0 +1,98 @@
+server:
+  port: 9001
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.100.100:30325/lanhe_sys?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: lanheerp
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 10
+      min-idle: 10
+      max-active: 50
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      filters: stat,wall
+      max-pool-prepared-statement-per-connection-size: 20
+      use-global-data-source-stat: true
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.100:31065
+        namespace: e5dfe71c-4579-4e22-bc7a-ac2e5ffab032
+      config:
+        import-check:
+          enabled: false
+        enabled: false
+    sentinel:
+      transport:
+        dashboard: 192.168.100.100:32329
+  redis:
+    redisson:
+      config:
+        singleServerConfig:
+          idleConnectionTimeout: 10000
+          connectTimeout: 10000
+          timeout: 3000
+          retryAttempts: 3
+          retryInterval: 1500
+          failedSlaveReconnectionInterval: 3000
+          failedSlaveCheckInterval: 60000
+          password: liulun666
+          subscriptionsPerConnection: 5
+          clientName: null
+          subscriptionConnectionMinimumIdleSize: 1
+          subscriptionConnectionPoolSize: 50
+          connectionMinimumIdleSize: 32
+          scanInterval: 1000
+          pingConnectionInterval: 0
+          keepAlive: false
+          tcpNoDelay: false
+          database: 0
+          dnsMonitoringInterval: 5000
+          address: redis://192.168.100.100:31351
+        threads: 16
+        nettyThreads: 32
+        transportMode: "NIO"
+  data:
+    redis:
+      host: 192.168.100.100
+      port: 31351
+      password: liulun666
+  config:
+    activate:
+      on-profile: dev
+mybatis-plus:
+  mapper-locations: classpath:/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+
+newland:
+  security:
+    permit-items:
+      - method: POST
+        url: /user/login
+
+
+lanhe:
+  swagger:
+    title: 系统管理
+    description: 系统管理
+    basePackage: com.newland.cloud.system
+    version: 1.0
+    concat:
+      email: sdfsdf
+      url: sdfsdf
+      name: sdfsdf

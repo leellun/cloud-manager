@@ -27,7 +27,13 @@ jwt适合管理系统，通过登录得到loginuser信息，然后userid放入jw
 
 对于网站的访问如果不存在手动清理用户信息的操作，可以直接通过password，token比较短
 
+####实战演练
+
+auth-center：认证中心
+
+cloud-gateway：网关
+
+cloud-system：系统管理
 
 
-实战演练
 
